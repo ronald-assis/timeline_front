@@ -46,7 +46,7 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
             href="http://rocketseat.com.br"
-            className="underline hover:text-gray-100"
+            className="underline hover:text-gray-200"
           >
             Rocketseat
           </a>
