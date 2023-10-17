@@ -1,11 +1,14 @@
 'use client'
 import { FormEvent } from 'react'
+import { useRouter } from 'next/navigation'
 import { Camera } from 'lucide-react'
 import Cookie from 'js-cookie'
+
 import { MediaPicker } from '@/components/MediaPicker'
 import { api } from '@/lib/api'
 
 export function NewMemoryForm() {
+  const router = useRouter()
   const handleCreateMemory = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
@@ -39,6 +42,8 @@ export function NewMemoryForm() {
         },
       },
     )
+
+    router.push('/')
   }
   return (
     <form onSubmit={handleCreateMemory} className="flex flex-1 flex-col gap-2">
